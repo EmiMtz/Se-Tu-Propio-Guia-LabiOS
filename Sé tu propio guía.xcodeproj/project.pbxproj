@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3738334F22FFB1FA00BA23F1 /* PlaceDetailARCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738334E22FFB1F900BA23F1 /* PlaceDetailARCell.swift */; };
+		3738335122FFB48C00BA23F1 /* PlaceDetailSeparatorARCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738335022FFB48C00BA23F1 /* PlaceDetailSeparatorARCell.swift */; };
 		3760954F22EFD45300A1D8FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760954E22EFD45300A1D8FB /* AppDelegate.swift */; };
 		3760955122EFD45300A1D8FB /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3760955022EFD45300A1D8FB /* art.scnassets */; };
 		3760955322EFD45300A1D8FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760955222EFD45300A1D8FB /* ViewController.swift */; };
@@ -15,6 +17,31 @@
 		3760955B22EFD45500A1D8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3760955922EFD45500A1D8FB /* LaunchScreen.storyboard */; };
 		3760956622EFD45500A1D8FB /* Se__tu_propio_gui_aTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760956522EFD45500A1D8FB /* Se__tu_propio_gui_aTests.swift */; };
 		3760957122EFD45500A1D8FB /* Se__tu_propio_gui_aUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760957022EFD45500A1D8FB /* Se__tu_propio_gui_aUITests.swift */; };
+		37CAA1F122F1055A000FE6F5 /* MapaKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAA1EF22F1055A000FE6F5 /* MapaKitViewController.swift */; };
+		37CAA1F222F1055A000FE6F5 /* MapaKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CAA1F022F1055A000FE6F5 /* MapaKitViewController.xib */; };
+		37CAA1F522F10703000FE6F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CAA1F422F10703000FE6F5 /* MapKit.framework */; };
+		37FAF42122FD4A4D0093EA67 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF42022FD4A4C0093EA67 /* PlacesTableViewController.swift */; };
+		37FAF42522FD6BAA0093EA67 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF42422FD6BAA0093EA67 /* PlacesTableViewCell.swift */; };
+		37FAF42722FD71CA0093EA67 /* PlacesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF42622FD71CA0093EA67 /* PlacesDetailViewController.swift */; };
+		37FAF42922FD72200093EA67 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF42822FD72200093EA67 /* Place.swift */; };
+		37FAF42E22FD76160093EA67 /* PlaceDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF42D22FD76160093EA67 /* PlaceDetailHeaderView.swift */; };
+		37FAF43022FD7B170093EA67 /* PlaceDetailconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF42F22FD7B170093EA67 /* PlaceDetailconTextCell.swift */; };
+		37FAF43222FD812E0093EA67 /* PlaceDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF43122FD812E0093EA67 /* PlaceDetailTextCell.swift */; };
+		37FAF43422FD82820093EA67 /* PlaceDetailSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF43322FD82820093EA67 /* PlaceDetailSeparatorCell.swift */; };
+		37FAF43622FD831A0093EA67 /* PlaceDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF43522FD831A0093EA67 /* PlaceDetailMapCell.swift */; };
+		37FAF43922FD85910093EA67 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF43822FD85910093EA67 /* UIColor+Ext.swift */; };
+		37FAF43B22FD85CB0093EA67 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAF43A22FD85CB0093EA67 /* UINavigationController+Ext.swift */; };
+		37FAF44C22FD8C2A0093EA67 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44122FD8C2A0093EA67 /* Rubik-MediumItalic.ttf */; };
+		37FAF44D22FD8C2A0093EA67 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44222FD8C2A0093EA67 /* Rubik-Bold.ttf */; };
+		37FAF44E22FD8C2A0093EA67 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44322FD8C2A0093EA67 /* Rubik-Light.ttf */; };
+		37FAF44F22FD8C2A0093EA67 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44422FD8C2A0093EA67 /* Rubik-Medium.ttf */; };
+		37FAF45022FD8C2A0093EA67 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44522FD8C2A0093EA67 /* Rubik-Black.ttf */; };
+		37FAF45122FD8C2A0093EA67 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44622FD8C2A0093EA67 /* Rubik-Italic.ttf */; };
+		37FAF45222FD8C2A0093EA67 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44722FD8C2A0093EA67 /* Rubik-LightItalic.ttf */; };
+		37FAF45322FD8C2A0093EA67 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44822FD8C2A0093EA67 /* OFL.txt */; };
+		37FAF45422FD8C2A0093EA67 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44922FD8C2A0093EA67 /* Rubik-BlackItalic.ttf */; };
+		37FAF45522FD8C2A0093EA67 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44A22FD8C2A0093EA67 /* Rubik-Regular.ttf */; };
+		37FAF45622FD8C2A0093EA67 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FAF44B22FD8C2A0093EA67 /* Rubik-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3738334E22FFB1F900BA23F1 /* PlaceDetailARCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailARCell.swift; sourceTree = "<group>"; };
+		3738335022FFB48C00BA23F1 /* PlaceDetailSeparatorARCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailSeparatorARCell.swift; sourceTree = "<group>"; };
 		3760954B22EFD45300A1D8FB /* Sé tu propio guía.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sé tu propio guía.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3760954E22EFD45300A1D8FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3760955022EFD45300A1D8FB /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -49,6 +78,31 @@
 		3760956C22EFD45500A1D8FB /* Sé tu propio guíaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sé tu propio guíaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3760957022EFD45500A1D8FB /* Se__tu_propio_gui_aUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Se__tu_propio_gui_aUITests.swift; sourceTree = "<group>"; };
 		3760957222EFD45500A1D8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37CAA1EF22F1055A000FE6F5 /* MapaKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaKitViewController.swift; sourceTree = "<group>"; };
+		37CAA1F022F1055A000FE6F5 /* MapaKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapaKitViewController.xib; sourceTree = "<group>"; };
+		37CAA1F422F10703000FE6F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		37FAF42022FD4A4C0093EA67 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		37FAF42422FD6BAA0093EA67 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		37FAF42622FD71CA0093EA67 /* PlacesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailViewController.swift; sourceTree = "<group>"; };
+		37FAF42822FD72200093EA67 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		37FAF42D22FD76160093EA67 /* PlaceDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailHeaderView.swift; sourceTree = "<group>"; };
+		37FAF42F22FD7B170093EA67 /* PlaceDetailconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailconTextCell.swift; sourceTree = "<group>"; };
+		37FAF43122FD812E0093EA67 /* PlaceDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailTextCell.swift; sourceTree = "<group>"; };
+		37FAF43322FD82820093EA67 /* PlaceDetailSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailSeparatorCell.swift; sourceTree = "<group>"; };
+		37FAF43522FD831A0093EA67 /* PlaceDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailMapCell.swift; sourceTree = "<group>"; };
+		37FAF43822FD85910093EA67 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		37FAF43A22FD85CB0093EA67 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		37FAF44122FD8C2A0093EA67 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		37FAF44222FD8C2A0093EA67 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		37FAF44322FD8C2A0093EA67 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		37FAF44422FD8C2A0093EA67 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		37FAF44522FD8C2A0093EA67 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		37FAF44622FD8C2A0093EA67 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		37FAF44722FD8C2A0093EA67 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		37FAF44822FD8C2A0093EA67 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		37FAF44922FD8C2A0093EA67 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		37FAF44A22FD8C2A0093EA67 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		37FAF44B22FD8C2A0093EA67 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CAA1F522F10703000FE6F5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +138,7 @@
 				3760956422EFD45500A1D8FB /* Sé tu propio guíaTests */,
 				3760956F22EFD45500A1D8FB /* Sé tu propio guíaUITests */,
 				3760954C22EFD45300A1D8FB /* Products */,
+				37CAA1F322F10703000FE6F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +155,17 @@
 		3760954D22EFD45300A1D8FB /* Sé tu propio guía */ = {
 			isa = PBXGroup;
 			children = (
-				3760954E22EFD45300A1D8FB /* AppDelegate.swift */,
 				3760955022EFD45300A1D8FB /* art.scnassets */,
 				3760955222EFD45300A1D8FB /* ViewController.swift */,
-				3760955422EFD45300A1D8FB /* Main.storyboard */,
+				37FAF43F22FD8C2A0093EA67 /* Resources */,
+				37FAF43722FD856D0093EA67 /* Extensions */,
+				37FAF43C22FD862F0093EA67 /* Storyboard */,
+				37FAF42B22FD73430093EA67 /* Model */,
+				37FAF42C22FD73520093EA67 /* View */,
+				37FAF42A22FD730E0093EA67 /* Controller */,
 				3760955722EFD45500A1D8FB /* Assets.xcassets */,
-				3760955922EFD45500A1D8FB /* LaunchScreen.storyboard */,
 				3760955C22EFD45500A1D8FB /* Info.plist */,
+				3760954E22EFD45300A1D8FB /* AppDelegate.swift */,
 			);
 			path = "Sé tu propio guía";
 			sourceTree = "<group>";
@@ -126,6 +186,92 @@
 				3760957222EFD45500A1D8FB /* Info.plist */,
 			);
 			path = "Sé tu propio guíaUITests";
+			sourceTree = "<group>";
+		};
+		37CAA1F322F10703000FE6F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37CAA1F422F10703000FE6F5 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37FAF42A22FD730E0093EA67 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37FAF42622FD71CA0093EA67 /* PlacesDetailViewController.swift */,
+				37FAF42022FD4A4C0093EA67 /* PlacesTableViewController.swift */,
+				37CAA1EF22F1055A000FE6F5 /* MapaKitViewController.swift */,
+				37CAA1F022F1055A000FE6F5 /* MapaKitViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37FAF42B22FD73430093EA67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37FAF42822FD72200093EA67 /* Place.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37FAF42C22FD73520093EA67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37FAF42422FD6BAA0093EA67 /* PlacesTableViewCell.swift */,
+				37FAF42D22FD76160093EA67 /* PlaceDetailHeaderView.swift */,
+				37FAF42F22FD7B170093EA67 /* PlaceDetailconTextCell.swift */,
+				37FAF43122FD812E0093EA67 /* PlaceDetailTextCell.swift */,
+				37FAF43322FD82820093EA67 /* PlaceDetailSeparatorCell.swift */,
+				37FAF43522FD831A0093EA67 /* PlaceDetailMapCell.swift */,
+				3738335022FFB48C00BA23F1 /* PlaceDetailSeparatorARCell.swift */,
+				3738334E22FFB1F900BA23F1 /* PlaceDetailARCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37FAF43722FD856D0093EA67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37FAF43822FD85910093EA67 /* UIColor+Ext.swift */,
+				37FAF43A22FD85CB0093EA67 /* UINavigationController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37FAF43C22FD862F0093EA67 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3760955922EFD45500A1D8FB /* LaunchScreen.storyboard */,
+				3760955422EFD45300A1D8FB /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		37FAF43F22FD8C2A0093EA67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37FAF44022FD8C2A0093EA67 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37FAF44022FD8C2A0093EA67 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				37FAF44122FD8C2A0093EA67 /* Rubik-MediumItalic.ttf */,
+				37FAF44222FD8C2A0093EA67 /* Rubik-Bold.ttf */,
+				37FAF44322FD8C2A0093EA67 /* Rubik-Light.ttf */,
+				37FAF44422FD8C2A0093EA67 /* Rubik-Medium.ttf */,
+				37FAF44522FD8C2A0093EA67 /* Rubik-Black.ttf */,
+				37FAF44622FD8C2A0093EA67 /* Rubik-Italic.ttf */,
+				37FAF44722FD8C2A0093EA67 /* Rubik-LightItalic.ttf */,
+				37FAF44822FD8C2A0093EA67 /* OFL.txt */,
+				37FAF44922FD8C2A0093EA67 /* Rubik-BlackItalic.ttf */,
+				37FAF44A22FD8C2A0093EA67 /* Rubik-Regular.ttf */,
+				37FAF44B22FD8C2A0093EA67 /* Rubik-BoldItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +342,11 @@
 				TargetAttributes = {
 					3760954A22EFD45300A1D8FB = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3760956022EFD45500A1D8FB = {
 						CreatedOnToolsVersion = 10.1;
@@ -233,8 +384,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3760955122EFD45300A1D8FB /* art.scnassets in Resources */,
+				37FAF45622FD8C2A0093EA67 /* Rubik-BoldItalic.ttf in Resources */,
+				37FAF44C22FD8C2A0093EA67 /* Rubik-MediumItalic.ttf in Resources */,
 				3760955B22EFD45500A1D8FB /* LaunchScreen.storyboard in Resources */,
+				37CAA1F222F1055A000FE6F5 /* MapaKitViewController.xib in Resources */,
+				37FAF45422FD8C2A0093EA67 /* Rubik-BlackItalic.ttf in Resources */,
+				37FAF44D22FD8C2A0093EA67 /* Rubik-Bold.ttf in Resources */,
+				37FAF44E22FD8C2A0093EA67 /* Rubik-Light.ttf in Resources */,
+				37FAF45122FD8C2A0093EA67 /* Rubik-Italic.ttf in Resources */,
+				37FAF44F22FD8C2A0093EA67 /* Rubik-Medium.ttf in Resources */,
+				37FAF45322FD8C2A0093EA67 /* OFL.txt in Resources */,
 				3760955822EFD45500A1D8FB /* Assets.xcassets in Resources */,
+				37FAF45222FD8C2A0093EA67 /* Rubik-LightItalic.ttf in Resources */,
+				37FAF45022FD8C2A0093EA67 /* Rubik-Black.ttf in Resources */,
+				37FAF45522FD8C2A0093EA67 /* Rubik-Regular.ttf in Resources */,
 				3760955622EFD45300A1D8FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,8 +423,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FAF43022FD7B170093EA67 /* PlaceDetailconTextCell.swift in Sources */,
 				3760955322EFD45300A1D8FB /* ViewController.swift in Sources */,
+				37FAF43622FD831A0093EA67 /* PlaceDetailMapCell.swift in Sources */,
+				3738334F22FFB1FA00BA23F1 /* PlaceDetailARCell.swift in Sources */,
+				37FAF43422FD82820093EA67 /* PlaceDetailSeparatorCell.swift in Sources */,
 				3760954F22EFD45300A1D8FB /* AppDelegate.swift in Sources */,
+				37FAF42E22FD76160093EA67 /* PlaceDetailHeaderView.swift in Sources */,
+				37CAA1F122F1055A000FE6F5 /* MapaKitViewController.swift in Sources */,
+				37FAF43922FD85910093EA67 /* UIColor+Ext.swift in Sources */,
+				37FAF42922FD72200093EA67 /* Place.swift in Sources */,
+				37FAF43222FD812E0093EA67 /* PlaceDetailTextCell.swift in Sources */,
+				37FAF43B22FD85CB0093EA67 /* UINavigationController+Ext.swift in Sources */,
+				37FAF42122FD4A4D0093EA67 /* PlacesTableViewController.swift in Sources */,
+				37FAF42522FD6BAA0093EA67 /* PlacesTableViewCell.swift in Sources */,
+				3738335122FFB48C00BA23F1 /* PlaceDetailSeparatorARCell.swift in Sources */,
+				37FAF42722FD71CA0093EA67 /* PlacesDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

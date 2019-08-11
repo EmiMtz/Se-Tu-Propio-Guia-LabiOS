@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "zocalo.jpeg",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "zocalo@2x.jpeg",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "zocalo@3x.jpg",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
