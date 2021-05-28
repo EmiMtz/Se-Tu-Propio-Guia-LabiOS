@@ -10,18 +10,6 @@ import UIKit
 
 import MapKit
 
-//class customPin: NSObject, MKAnnotation {
-//    var coordinate: CLLocationCoordinate2D
-//    var title: String?
-//    var subtitle: String?
-//
-//    init(pinTitle:String, pinSubTitle: String, location:CLLocationCoordinate2D) {
-//        self.title = pinTitle
-//        self.subtitle = pinSubTitle
-//        self.coordinate = location
-//    }
-//}
-
 class MapaKitViewController: UIViewController, UISearchBarDelegate {
     
     let locationManager = CLLocationManager ()
@@ -43,8 +31,39 @@ class MapaKitViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configCurrentLocation()
+        self.showPinMap()
+
+        //Configure the mapView = mapita
+        mapita.delegate = self
+        mapita.showsTraffic = true
+        mapita.showsScale = true
+        mapita.showsCompass = true
+        mapita.showsPointsOfInterest = true
         
+        mapita.showsUserLocation = true
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+        
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+
+        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.action(gestureRecognizer:)))
+        mapita.addGestureRecognizer(tapGesture)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 3
+        mapita.addGestureRecognizer(tap)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { }
+    
+    func showPinMap(){
         geocoder.geocodeAddressString(place.location) { (placemarks, error) in
             if let error = error {
                 print(error)
@@ -68,10 +87,10 @@ class MapaKitViewController: UIViewController, UISearchBarDelegate {
                     self.mapita.selectAnnotation(annotation, animated: true)
                     
                     
-                    let sourceCoordinates = self.locationManager.location?.coordinate
+                    guard let sourceCoordinates = self.locationManager.location?.coordinate else { return self.alertLocation(tit: "Error de localización", men: "Actualmente tiene denegada la localización del dispositivo, activalos desde los ajustes de la aplicación") }
                     let destCoordinates = CLLocationCoordinate2DMake(annotation.coordinate.latitude, annotation.coordinate.longitude)
                     
-                    let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
+                    let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates)
                     let destPlacemark = MKPlacemark(coordinate: destCoordinates)
                     
                     let sourceItem = MKMapItem(placemark: sourcePlacemark)
@@ -115,65 +134,24 @@ class MapaKitViewController: UIViewController, UISearchBarDelegate {
                 }
             }
         }
-        
 
-        //Configure the mapView = mapita
-        mapita.delegate = self
-        mapita.showsTraffic = true
-        mapita.showsScale = true
-        mapita.showsCompass = true
-        mapita.showsPointsOfInterest = true
-        
-        mapita.showsUserLocation = true
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.startUpdatingLocation()
-        
-        if CLLocationManager.locationServicesEnabled(){
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-        
-//        let sourceCoordinates = locationManager.location?.coordinate
-//        let destCoordinates = CLLocationCoordinate2DMake(latitud, longitud)
-//
-        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.action(gestureRecognizer:)))
-        mapita.addGestureRecognizer(tapGesture)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
-        tap.numberOfTapsRequired = 3
-        mapita.addGestureRecognizer(tap)
-
-        // Do any additional setup after loading the view.
-        
-  //      searchCompleter.delegate = self as? MKLocalSearchCompleterDelegate
-        
-//        let location = CLLocationCoordinate2D(latitude: 19.3327, longitude: -99.1920)
-//        let region1 = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
-//        self.mapita.setRegion(region1, animated: true)
-//
-//        let pin = customPin(pinTitle: "Estadio Olimpico Universitario", pinSubTitle: "CDMX, Coyoacán, México", location: location)
-//        self.mapita.addAnnotation(pin)
-//        self.mapita.delegate = self
-        
-        
     }
     
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        if annotation is MKUserLocation {
-//            return nil
-//        }
-//        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "Customannotation")
-//        annotationView.image = UIImage(named: "pin2")
-//        annotationView.canShowCallout = true
-//        return annotationView
-//    }
-    
-//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-//        print("annotation title == \(String(describing:view.annotation?.title!))")
-//    }
+    ///Para pedir permisos de ubicación del usuario en caso de que no se hayan dado los permisos al momento de instalar la aplicación.
+    func configCurrentLocation(){
+        let locationManager = CLLocationManager()
+        if #available(iOS 13.0, *) {
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
 
     @IBAction func cambiarVistaMapa(_ sender: Any) {
         

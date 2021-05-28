@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 class PlacesTableViewController: UITableViewController {
     
+    let locationManager = CLLocationManager ()
     var places: [Place] = [
         Place(name: "Palacio de Bellas Artes", type: "Museo de Arte", location: "Avenido Juárez, Esquina eje central, centro histórico, 06010 Ciudad de México, DF México", image: "PalaBellasArtes", phone: "01 528 647 6500", description: "El Palacio de Bellas Artes constituye todo un símbolo de la cultura y el arte mexicano, con una increíble arquitectura que mezcla a la perfección dos estilos diferentes de manera elegante y en total armonía: el Art Decó y el Art. Noveau. Erigido en base a un diseño del arquitecto Adamo Boeri, su construcción se inició en el año 1904 con la finalidad de albergar un teatro para conmemorar los 100 años de la Independencia del país, se pensaba sería uno de los mayores del mundo, casi a la altura de la Ópera de París. El Palacio de Bellas Artes es la sede de dos museos: el Museo del Palacio de Bellas Artes y el Museo Nacional de Arquitectura.", realidad: "art.scnassets/Palacio/Palacio.scn", isVisited: false),
         Place(name: "Centro Histórico CDMX", type: "Histórico", location: "Calle Plaza de la Constitución, Centro-Área 1, 06060 Cuauhtémoc, CDMX México", image: "zocalo", phone: "S/N", description: "El Centro Histórico de la Ciudad de México alberga los más preciados tesoros culturales del país. Comenzando el recorrido por la Alameda Central podrás ver la arquitectura Ecléctica Porfiriana, y sitios como el famoso “Café Tacuba“, donde podrás deleitarte con los platos típicos del país. Más adelante te encontrarás: El Museo Nacional de Arte, ubicado frente a la Plaza Tolsá, donde también podrás visitar el Palacio de Minería. Otro de los edificios emblemáticos es el Palacio de Correos, de estilo veneciano", realidad: "art.scnassets/Centro/Centro.dae", isVisited: false),
@@ -35,6 +37,7 @@ class PlacesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initLocation()
         navigationController?.navigationBar.prefersLargeTitles = true
         
         // Customize the navigation bar
@@ -52,6 +55,28 @@ class PlacesTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    func initLocation() {
+        let permiso = CLLocationManager.authorizationStatus()
+        
+        if permiso == .notDetermined{
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+        } else if permiso == .denied {
+            alertLocation(tit: "Error de localización", men: "Actualmente tiene denegada la localización del dispositivo")
+        } else if permiso == .restricted{
+             alertLocation(tit: "Error de localización", men: "Actualmente tiene restringida la localización del dispositivo")
+        } else {
+            guard (locationManager.location?.coordinate) != nil else { return }
+        }
+    }
+    
+    func alertLocation(tit: String, men: String)  {
+        let alerta = UIAlertController(title: tit, message: men,preferredStyle: .alert)
+        let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        alerta.addAction(action)
+        self.present(alerta, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

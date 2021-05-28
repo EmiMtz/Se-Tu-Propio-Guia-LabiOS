@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let locationManager = CLLocationManager()
     
     // For Xcode 9 users, UIApplication.LaunchOptionsKey is equal to UIApplicationLaunchOptionsKey
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -24,6 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Changing the style of the status bar globally
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        if #available(iOS 13.0, *) {
+            locationManager.requestAlwaysAuthorization()
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
         
         return true
     }
